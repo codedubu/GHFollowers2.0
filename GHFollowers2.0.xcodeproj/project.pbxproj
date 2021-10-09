@@ -13,6 +13,8 @@
 		798231E8270F82BA00E808C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798231E7270F82BA00E808C3 /* User.swift */; };
 		798231EC270F8A1500E808C3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798231EB270F8A1500E808C3 /* NetworkManager.swift */; };
 		799505BF270F980D00751CD9 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505BE270F980D00751CD9 /* GFError.swift */; };
+		799505E5271232B400751CD9 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505E4271232B400751CD9 /* FollowerCell.swift */; };
+		799505E7271233A000751CD9 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799505E6271233A000751CD9 /* GFAvatarImageView.swift */; };
 		799F2D3B270B97DC001BB484 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F2D3A270B97DC001BB484 /* AppDelegate.swift */; };
 		799F2D3D270B97DC001BB484 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F2D3C270B97DC001BB484 /* SceneDelegate.swift */; };
 		799F2D44270B97DE001BB484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799F2D43270B97DE001BB484 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		798231E7270F82BA00E808C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		798231EB270F8A1500E808C3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		799505BE270F980D00751CD9 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
+		799505E4271232B400751CD9 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		799505E6271233A000751CD9 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		799F2D37270B97DC001BB484 /* GHFollowers2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799F2D3A270B97DC001BB484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		799F2D3C270B97DC001BB484 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,12 +94,14 @@
 		798231DF270F775600E808C3 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				799505E32712328B00751CD9 /* Cells */,
 				79D07F92270CE15700A2C954 /* GFTextField.swift */,
 				799F2D57270CDD84001BB484 /* GFButton.swift */,
 				79D07F96270E6FC700A2C954 /* GFTitleLabel.swift */,
 				79D07F98270E715D00A2C954 /* GFBodyLabel.swift */,
 				79D07F9A270E722300A2C954 /* GFAlertVC.swift */,
 				798231E3270F7E2600E808C3 /* GFAlertContainerView.swift */,
+				799505E6271233A000751CD9 /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -132,6 +138,14 @@
 				798231EB270F8A1500E808C3 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		799505E32712328B00751CD9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				799505E4271232B400751CD9 /* FollowerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		799F2D2E270B97DC001BB484 = {
@@ -251,6 +265,8 @@
 				798231DB270F749700E808C3 /* UIViewController+Ext.swift in Sources */,
 				799F2D54270BAF27001BB484 /* SearchVC.swift in Sources */,
 				798231E8270F82BA00E808C3 /* User.swift in Sources */,
+				799505E5271232B400751CD9 /* FollowerCell.swift in Sources */,
+				799505E7271233A000751CD9 /* GFAvatarImageView.swift in Sources */,
 				79D07F9B270E722300A2C954 /* GFAlertVC.swift in Sources */,
 				798231E6270F81F900E808C3 /* Follower.swift in Sources */,
 				79D07F99270E715D00A2C954 /* GFBodyLabel.swift in Sources */,
