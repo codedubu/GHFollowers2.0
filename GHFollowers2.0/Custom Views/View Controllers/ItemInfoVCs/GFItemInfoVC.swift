@@ -12,7 +12,6 @@ protocol ItemInfoVCDelegate: AnyObject {
     func didTapGetFollowers(for user: User)
 }
 
-
 class GFItemInfoVC: UIViewController {
     
     let stackView       = UIStackView()
@@ -21,6 +20,7 @@ class GFItemInfoVC: UIViewController {
     let actionButton    = GFButton()
     
     var user: User!
+    
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
@@ -83,5 +83,4 @@ class GFItemInfoVC: UIViewController {
             actionButton.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
-
 } // END OF CLASS

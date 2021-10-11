@@ -14,7 +14,6 @@ class NetworkManager {
     static let followersPerPage     = 100
     let cache                       = NSCache<NSString, UIImage>()
     
-    
     private init() {}
     
     
@@ -97,7 +96,6 @@ class NetworkManager {
     }
     
     func downloadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
-            
             let cacheKey = NSString(string: urlString)
             
             if let image = cache.object(forKey: cacheKey) {
@@ -126,5 +124,4 @@ class NetworkManager {
             
             task.resume()
         }
-    
 } // END OF CLASS

@@ -17,6 +17,7 @@ class GFAlertVC: UIViewController {
     var alertTitle: String?
     var message: String?
     var buttonTitle: String?
+    
     let padding: CGFloat = 20
     
     
@@ -37,6 +38,7 @@ class GFAlertVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         view.addSubviews(containerView, titleLabel, actionButton, messageLabel)
+        
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
@@ -95,5 +97,4 @@ class GFAlertVC: UIViewController {
     @objc func dismissVC() {
         dismiss(animated: true)
     }
-    
 } // END OF CLASS

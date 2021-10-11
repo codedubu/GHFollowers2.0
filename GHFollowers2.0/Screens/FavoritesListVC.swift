@@ -53,24 +53,28 @@ class FavoritesListVC: GFDataLoadingVC {
             
             switch result {
             case .success(let favorites):
-                
-                if favorites.isEmpty {
-                    self.showEmptyStateView(with: "It seems you don't have any favorites\nLet's add some!", in: self.view)
-                } else {
-                    self.favorites = favorites
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
-                
+                self.updateUI(with: favorites)
+            
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "OK")
             }
         }
     }
     
+    
+    func updateUI(with favorites: [Follower]) {
+        if favorites.isEmpty {
+            self.showEmptyStateView(with: "It seems you don't have any favorites.\nLet's add some!", in: self.view)
+        } else {
+            self.favorites = favorites
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.view.bringSubviewToFront(self.tableView)
+            }
+        }
+    }
 } // END OF CLASS
+
 
 // MARK: - Extensions
 
@@ -113,5 +117,4 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
             self.presentGFAlertOnMainThread(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
         }
     }
-    
 } // MARK OF EXTENSION

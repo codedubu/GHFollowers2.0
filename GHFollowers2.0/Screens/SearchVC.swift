@@ -12,7 +12,6 @@ class SearchVC: UIViewController {
     let logoImageView           = UIImageView()
     let usernameTextField       = GFTextField()
     let callToActionButton      = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
-    var logoImageViewTopConstraint: NSLayoutConstraint!
     
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
 
@@ -44,6 +43,7 @@ class SearchVC: UIViewController {
     @objc func pushFollowerListVC() {
         guard isUsernameEntered else {
             presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username!", buttonTitle: "Ok")
+            
             return
         }
         
@@ -60,10 +60,8 @@ class SearchVC: UIViewController {
         
         let topConstraintConstant = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
         
-        logoImageViewTopConstraint = logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: CGFloat(topConstraintConstant))
-        logoImageViewTopConstraint.isActive = true
-        
         NSLayoutConstraint.activate([
+            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: CGFloat(topConstraintConstant)),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)
@@ -93,7 +91,6 @@ class SearchVC: UIViewController {
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-    
 } // END OF CLASS
 
 
@@ -102,8 +99,7 @@ class SearchVC: UIViewController {
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         pushFollowerListVC()
+        
         return true
     }
-    
-    
 } // END OF EXTENSION

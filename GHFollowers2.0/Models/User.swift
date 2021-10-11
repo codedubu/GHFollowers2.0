@@ -19,5 +19,4 @@ struct User: Codable {
     let followers: Int
     let following: Int
     let createdAt: Date
-    
 } // END OF STRUCT

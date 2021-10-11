@@ -8,9 +8,9 @@
 import UIKit
 
 enum ItemInfoType {
+    
     case repos, gists, followers, following
 }
-
 
 class GFItemInfoView: UIView {
     
@@ -18,14 +18,17 @@ class GFItemInfoView: UIView {
     let titleLabel      = GFTitleLabel(textAlignment: .left, fontSize: 14)
     let countLabel      = GFTitleLabel(textAlignment: .center, fontSize: 14)
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     private func configure() {
         addSubviews(symbolImageView, titleLabel, countLabel)
@@ -56,20 +59,19 @@ class GFItemInfoView: UIView {
     func set(itemInfoType: ItemInfoType, withCount count: Int) {
         switch itemInfoType {
         case .repos:
-            symbolImageView.image = SFSymbols.repos
-            titleLabel.text = "Public Repos"
+            symbolImageView.image   = SFSymbols.repos
+            titleLabel.text         = "Public Repos"
         case .gists:
             symbolImageView.image = SFSymbols.gists
-            titleLabel.text = "Public Gists"
+            titleLabel.text         = "Public Gists"
         case .followers:
             symbolImageView.image = SFSymbols.followers
-            titleLabel.text = "Followers"
+            titleLabel.text         = "Followers"
         case .following:
             symbolImageView.image = SFSymbols.following
-            titleLabel.text = "Following"
+            titleLabel.text         = "Following"
         }
         
         countLabel.text = String(count)
     }
-
 } // END OF CLASS

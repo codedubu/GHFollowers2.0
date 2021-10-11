@@ -15,6 +15,7 @@ class GFRepoItemVC: GFItemInfoVC {
     
     weak var delegate: GFRepoItemVCDelegate!
     
+    
     init(user: User, delegate: GFRepoItemVCDelegate) {
         super.init(user: user)
         self.delegate = delegate
@@ -40,4 +41,4 @@ class GFRepoItemVC: GFItemInfoVC {
     override func actionButtonTapped() {
         delegate.didTapGitHubProfile(for: user)
     }
-}
+} // END OF CLASS
