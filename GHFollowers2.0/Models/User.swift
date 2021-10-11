@@ -18,6 +18,6 @@ struct User: Codable {
     let publicGists: Int
     let followers: Int
     let following: Int
-    let createdAt: String
+    let createdAt: Date
     
 } // END OF STRUCT
